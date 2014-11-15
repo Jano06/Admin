@@ -1,0 +1,229 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MenuPrincipal.master.cs" Inherits="Master_MenuPrincipal" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head runat="server" id="head1">
+        <title></title>
+        <style type="text/css">	
+	        .master_content {
+		        position:relative;
+		        left:1px;
+		        right:-1px;
+		        vertical-align:middle;
+		        width:1024px;
+		        height:768px;
+                margin-left:auto;
+		        margin-right:auto;
+		        font-family:Verdana;
+		        font-size:9px;
+		        z-index:1;
+                top: 0px;
+            }	
+	        .master_versionBar {
+		        position:absolute;
+		        display:block;
+		        background-color:#000099;
+		        width: 1020px;
+		        height: 15px;
+                top: 2px;
+                left: 3px;
+            }	
+	        .master_version { 
+		        position:relative;
+		        float:left;
+		        margin-left:15px;
+		        margin-top:3px;
+		        font-size:11px;
+		        color:#FFFFFF;
+	        }	
+	        .master_headerBack {
+		        position:absolute;
+		        display:block;
+		        width:1020px;
+		        height:116px;
+		        top:3px;	        		        
+                left: 3px;
+            }	
+	        .master_headerSession {
+		        position: relative;
+        	    float: right;
+        	    margin-right: 30px;
+        	    margin-top: 20px;
+        	    width: 96px;
+        	    text-align: right;
+        	    height: 17px;
+                top: -98px;
+                left: 9px;
+                font-size: small;
+	        }	
+	        .master_headerSession A {
+		        text-decoration:underline;
+		        font-weight:bold;		
+		        font-size:11px;
+		        color:#FFF;		
+	        }	
+	        .master_title {
+		        position:absolute;
+		        display:block;
+		        width:400px;
+		        height:30px;
+		        top:130px;
+		        left:450px;
+		        font-size:20px;
+		        font-weight:bold;
+		        color:#2D96FF;
+	        }	
+	        .master_menuTitle {
+		        position:absolute;
+		        top: 183px;
+		        height: 17px;
+		        left: 10px;
+		        width: 180px;
+		        font-size:11px;
+		        font-style:italic;
+		        font-weight:bold;		
+		        color:#FFFFFF;
+		        background-color:#477AA5;	
+		        text-align:center;
+                right: 814px;
+            }	
+	        .master_menu {
+		        position:absolute;
+		        top:200px;
+		        height:auto;
+		        left:10px;
+		        width:180px;
+		        border-left:0px solid #DDE7ED;
+	        }	
+	        .master_menuHeader {
+		        position:relative;
+		        float:left;
+		        width:200px;
+		        height:15px;
+		        background-color:#DDE7ED;
+		        color:#0000FF;
+	        }	
+	        .master_menuContent {
+		        position:relative;
+		        float:left;
+		        width:200px;
+		        height:auto;
+		        z-index:999;		    
+	        }
+
+	        .master_mainTitle {
+		        position:absolute;
+		        top:166px;
+		        left:228px;
+		        width:790px;
+		        height:20px;
+		        font-size:11px;
+		        font-weight:bold;
+		        text-align:center;
+		        color:#808080;			         
+	        }	
+	        .master_main {
+		        position:absolute;
+		        top: 146px;
+		        left: 204px;
+		        width: 820px;
+		        height: 600px;
+		        z-index:-1;
+	        }	
+	        .master_gridResult {
+		        position:absolute;
+		        top:510px;
+		        width:1000px;
+		        height:200px;
+		        left:20px;
+	        }		
+	        .master_userInfo {
+		        position:absolute;
+		        top:716px;
+		        left:784px;
+		        width:224px;
+		        height:18px;
+		        text-align:right;
+		        color:#808080;
+		        font-size:10px;
+		        font-weight:bold;
+	        }
+	        .master_popUp_area {
+	            position:absolute;
+	            top:720px;
+	            left:100px;
+	            width:100px;
+	            height:18px;	           	
+	            overflow:visible;
+	        }
+	        .master_footerBack {
+		        position:absolute;
+		        width:1024px;
+		        height:25px;
+		        top:900px;
+		        background-color:#FFD700;
+	        }	
+	        .master_footer {
+		        position:relative;
+		        float:left;
+		        width:1024px;
+		        height:20px;
+		        text-align:center;
+		        margin-top:5px;
+	        }
+	        .menuIE
+            {
+                position:absolute;
+                z-index:999;
+            }
+        
+        </style>
+        <asp:ContentPlaceHolder ID="Stylesheets" runat="server">
+            <link rel="stylesheet" href="../Style/StyleKisem.css" type="text/css" />
+    </asp:ContentPlaceHolder>                 
+    </head>    
+    <body class="master_content">
+        <form id="form1" runat="server" >                
+            <div class="master_headerBack"> 
+                <asp:Image ID="imgBanner" runat="server" ImageUrl="~/Imagenes/Banner_superiorInicio.jpg" />                           
+                <div class="master_headerSession">
+            	    <asp:LinkButton ID="LinkButton1" runat="server" ToolTip="Cerrar Sesión Actual" onclick="cerrarSesion_Click" Font-Italic="True" ForeColor="White">Cerrar Sesión</asp:LinkButton>
+                    <br /><br />
+                </div>
+            </div>
+            <div class="master_menuTitle">Menu</div>
+            <div class="master_menu">                
+                <asp:Menu CssClass="menuIE" ID="MenuPrincipalaspx" runat="server" ClientIDMode="AutoID">                    
+                    <DynamicHoverStyle BackColor="#9BBCDE" ForeColor="#E4EAF0" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" BackColor="#E4EAF0" Width="200px" />                                        
+                    <StaticHoverStyle BackColor="#9BBCDE" ForeColor="#E4EAF0" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" BackColor="#E4EAF0" Width="180px" />
+                    <StaticMenuStyle BackColor="#E4EAF0" />                    
+                </asp:Menu>                                                                           
+            </div>                                                
+            <div class="master_main">
+                <AjaxControlToolkit:ToolkitScriptManager ID="ScriptAjax" runat="server">
+                </AjaxControlToolkit:ToolkitScriptManager>                
+                <asp:ContentPlaceHolder  runat="server" ID="ContenidoPrincipal"/>
+            </div>                       
+            <div class="master_popUp_area">
+                <asp:ContentPlaceHolder runat="server" ID="ContenidoPopUps" />
+            </div>                                                       
+            <%--<div class="master_footerBack">
+                <asp:Table  ID="Table2" runat="server" Width="1002px" >
+                    <asp:TableRow>
+                        <asp:TableCell HorizontalAlign="Left" Width="300">
+                            Rol: <asp:label ID="lblRolUsuario" runat="server" />
+                        </asp:TableCell><asp:TableCell Width="600" HorizontalAlign="Center">
+                            Desarrollado por <a href="http://www.meigroup.com/">Kisem</a>
+                        </asp:TableCell><asp:TableCell HorizontalAlign="Right" Width="300">
+                            Usuario: <asp:label ID="lblUsuarioSistema" runat="server" />
+                        </asp:TableCell></asp:TableRow></asp:Table></div>--%>
+                        <div class="master_versionBar">
+                <div 
+                    class="master_version" 
+                    style="background-color: #000099; font-family: Verdana; font-size: 11px; color: #FFFFFF; position: inherit; width: 1000px; top: 2px; left: -9px; height: 11px; margin-bottom: 0px;"><asp:Label ID="lblTitleVersion" Text="V 2.0 Admin Kisem" runat="server" /></div>
+            </div>
+            </form>
+    </body>    
+</html>

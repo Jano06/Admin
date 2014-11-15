@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Master_Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head id="Head1" runat="server">
+        <title></title>
+        <style type="text/css">
+            .title
+            {
+        	height: 13px;
+        	width: 1024px;
+            }
+            .title2
+            {
+        	    background-color: #FFFFFF;
+        	    font-family: Verdana;
+        	    font-size: 11px;
+        	    color: #3366CC;
+        	    height: 14px;
+        	    width: 1024px;
+        	    font-weight: bold;
+        	    text-align: center;
+            }
+            .title3
+            {
+        	    width: 184px;
+            }
+            .master_content
+            {
+        	    position: relative;
+        	    left: 0px;
+        	    right: 0px;
+        	    vertical-align: middle;
+        	    width: 1024px;
+        	    height: 627px;
+        	    margin-left: auto;
+        	    margin-right: auto;
+        	    font-family: Verdana;
+        	    font-size: 9px;
+                top: 0px;
+            }
+            .master_footerBack
+            {
+        	    position: absolute;
+        	    width: 1024px;
+        	    height: 25px;
+        	    top: 639px;
+        	    background-color: #FFD700;
+        	    text-align: center;
+                left: 0px;
+            }
+        </style>
+</head>
+<body class="master_content">
+    <form id="Form1" runat="server">
+    <asp:ContentPlaceHolder ID="ENCABEZADO" runat="server">
+        <div class="header">
+            <div class="title" style="background-color: #000099; font-family: Verdana; font-size: 11px; color: #FFFFFF; position: inherit; width: 1020px;">
+                <asp:Label ID="lblTitleVersion" runat="server" Text="V 2.0 Admin Kisem" />
+            </div>
+            <div class="title1">
+                <asp:Image ID="imgBanner" runat="server" ImageUrl="~/Imagenes/Banner_superiorInicio.jpg" Width="1020px" Height="117px" />
+            </div>
+        </div>
+        <div class="title2">
+            <asp:Label ID="lblTitlePrincipal" runat="server" Text="BIENVENIDO ADMINISTRADOR" />
+        </div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+    </asp:ContentPlaceHolder>
+    
+    <Ajaxcontroltoolkit:toolkitscriptmanager ID="ScriptManager1" runat="server">
+    </Ajaxcontroltoolkit:toolkitscriptmanager>
+    <div style="position: absolute; top: 188px; left: 8px; height: 403px; width: 1026px; font-family: Verdana; font-size: 11px; color: #3366CC;" 
+        class="main">
+        <asp:ContentPlaceHolder ID="ContenidoLogin" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="master_footerBack">
+        Desarrollado por <a href="http://www.kisem.com.mx/">KISEM MEXICO</a>
+    </div>
+    </form>
+</body>
+</html>

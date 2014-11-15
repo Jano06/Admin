@@ -1,0 +1,184 @@
+﻿body
+{
+    font-family:Verdana, Arial, Sans-Serif;
+    font-size: 15px;
+    width: 936px;
+}
+
+input
+{
+    font-family: Verdana, Arial, Sans-Serif;
+}
+
+.tituloPanel
+{
+    font-size:11px;
+	font-weight:bold;
+	color:#808080;
+}
+        
+.botonColor
+{
+    color:white;    
+    background-color:#D32E22;
+    width:95px;
+    height: 26px;
+    z-index:998;
+} 
+.botonColor[Disabled]
+{
+    color:white;
+    border-color:#E2D632;
+    background-color:#ffffff;
+    width:95px;
+    height: 26px;
+    font-size:11px;
+}
+
+.fontList
+{
+    font-family:Verdana, Arial, Sans-Serif;
+    font-size:9px;
+    background-color:White;
+    z-index:998;
+}
+
+.fontList[Disabled]
+{
+    background-color:#F7F7F7;
+    font-style:normal; color:Black;
+}
+
+.fontList[ReadOnly]
+{
+    background-color:#F7F7F7;
+    font-style:normal; color:Black;
+}
+
+
+.popUpMain 
+{
+	position: relative;
+	height:auto;
+	background-color:#FAFBFD;	
+	overflow:auto;
+	min-width: 250px;	
+	margin-top:20px;	 
+    z-index: 999;
+    -zoom: 1;	
+	-moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    -khtml-border-radius:5px;
+    -border-radius:5px;            
+    border:15px solid #434753;    
+}
+
+.popUpTitle 
+{	
+	text-align:center;
+	font-weight:bold;
+	font-size:11px;
+	margin-top:10px;
+	color:#434753;	
+}
+
+.popUpContent 
+{
+	position:relative;	
+	width:inherit;
+	height:inherit;
+	overflow:inherit;
+	vertical-align:middle;
+	text-align:center;
+	font-size:10px;
+}
+
+.popUpFooter 
+{	
+	margin-top:5px;	
+	text-align:center;	
+	vertical-align:bottom;
+	margin-bottom:10px;		
+}
+
+.mensajeError 
+{
+    color:#F00;
+    font-size: 11px;
+    font-weight:bold;
+}
+
+.celdasCentradas
+{
+    text-align:center;
+}
+
+.fuenteNegritas
+{
+    font-weight:bold;
+}
+        
+.modal-inner-wrapper
+{
+    width:340px;
+    height:340px;
+    background-color:Gray;
+}
+           
+.modal-inner-wrapper .content
+{
+    width:320px; height:320px; background-color:#FFFFFF; border: solid 1px Gray; z-index:9999;
+    float:right; margin-top:10px; margin-right:10px;
+}
+        
+.modal-inner-wrapper .content .close
+{
+    float:left;             
+}
+        
+.modal-inner-wrapper .content .body
+{
+    margin-top:20px;
+}
+        
+.rounded-corners 
+{            
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -border-radius: 5px;
+    -behavior: url(border-radius.htc);
+}
+
+.rel 
+{
+    position: relative;
+    z-index: inherit;
+    -zoom: 1; 
+
+}
+        
+.modal-bg
+{
+    background-color: Gray;    
+    filter: alpha(opacity=50);
+    opacity: 0.6;
+    z-index: 999;
+}        
+
+.modal
+{
+    position: absolute;    
+}
+        
+.MyCalendar .ajax__calendar_container 
+{            
+    background-color:#81BEF7;
+    color:Blue;
+}
+
+.menuIE
+{
+    position: absolute;
+    z-index:999;
+}      
